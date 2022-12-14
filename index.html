@@ -1,23 +1,29 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    * {
-        user-select: none;        
+    body {
+        height: 65vh;
     }
-    span {
-        text-shadow: 0px 0px 4px;
+    div {
+        background: red;
+        width: 150px;
+        height: 150px;
+        box-shadow: 0 0 8px red;
+        margin: 32.5vh auto;
+        vertical-align: middle;
         cursor: pointer;
-        
+        transition: 0.2s ease;
     }
-    span:hover {
-        text-decoration: underline;
-    }
-    .red {
-        color: red;
-    }
-    .green {
-        color: green;
-    }
-    .blue {
-        color: blue;
+    div:hover {
+        transform: scale(1.05);
     }
 </style>
-<h1><span class="red">Roston</span> <span class="green">is</span> <span class="blue">homeless</span>.</h1>
+<div id="div1" onclick="randomColor()"></div>
+<script>
+    function randomColor() {
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        document.getElementById('div1').style.background = `rgb(${r},${g},${b})`;
+        document.getElementById('div1').style.boxShadow = `0 0 8px rgb(${r},${g},${b})`;
+    }
+</script>
