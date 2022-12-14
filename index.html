@@ -1,29 +1,8 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-    body {
-        height: 65vh;
-    }
-    div {
-        background: red;
-        width: 150px;
-        height: 150px;
-        box-shadow: 0 0 8px red;
-        margin: 32.5vh auto;
-        vertical-align: middle;
-        cursor: pointer;
-        transition: 0.2s ease;
-    }
-    div:hover {
-        transform: scale(1.05);
-    }
-</style>
-<div id="div1" onclick="randomColor()"></div>
+<body id="body1" onclick="randomColor()" style="cursor: pointer;">
+</body>
 <script>
-    function randomColor() {
-        var r = Math.floor(Math.random() * 256);
-        var g = Math.floor(Math.random() * 256);
-        var b = Math.floor(Math.random() * 256);
-        document.getElementById('div1').style.background = `rgb(${r},${g},${b})`;
-        document.getElementById('div1').style.boxShadow = `0 0 8px rgb(${r},${g},${b})`;
-    }
+  document.getElementById('body1').style.background = `hsl(${Math.floor(Math.random() * 361)}, 100%, 50%)`;
+  function randomColor() {
+      document.getElementById('body1').style.background = `hsl(${Math.floor(Math.random() * 361)}, 100%, 50%)`;
+  }
 </script>
