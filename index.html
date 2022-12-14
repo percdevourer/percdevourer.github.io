@@ -1,17 +1,25 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<body id="body1" onclick="randomColor(), increment()" style="cursor: pointer; padding: 43.33vh; margin: 0; height: 0px">
-    <h1 id="_num" style="font-family: Roboto; color: white; text-shadow: 2px 2px 4px rgb(96,96,96); user-select: none; font-size: 5em; text-align: center;">0</h1>
-</body>
-<script>
-  var num = 0;
-  document.getElementById('body1').style.background = `hsl(${Math.floor(Math.random() * 361)}, 100%, 50%)`;
-  function randomColor() {
-      document.getElementById('body1').style.background = `hsl(${Math.floor(Math.random() * 361)}, 100%, 50%)`;
-  }
-  function increment() {
-    num++;
-    _num.innerHTML = num;
-  }
-</script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        height: 100vh;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div"></div>
+    <script>
+      document.getElementById("div").style.background = `hsl(${Math.floor(Math.random() * 361)}, 100%, 50%)`;
+      function randomColor() {
+        document.getElementById("div").style.background = `hsl(${Math.floor(Math.random() * 361)}, 100%, 50%)`;      
+      }
+      setInterval(randomColor, 1)
+    </script>
+  </body>
+</html>
