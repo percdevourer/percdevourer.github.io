@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      div {
-        height: 100vh;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="div">tim was here</div>
+  <!-- Adds a funky flow to Lars McCall -->
+  <body id="body" style="color:red;font-weight:bold;text-shadow:red 0px 0px 10px;font-family: arial;text-align:center;font-size: 5rem;">
+      Lars McCall does not have the Gaz operator.
     <script>
-      document.getElementById("div").style.background = `hsl(${Math.floor(Math.random() * 361)}, 100%, 50%)`;
+      // To assign a random color
       function randomColor() {
-        document.getElementById("div").style.background = `hsl(${Math.floor(Math.random() * 361)}, 100%, 50%)`;      
+        document.getElementById("body").style.background = `hsl(${Math.floor(Math.random() * 361)}, 100%, 50%)`;      
       }
-      setInterval(randomColor, 1)
+      // Executes randomColor every millisecond
+      setInterval(randomColor, 1);
     </script>
   </body>
 </html>
