@@ -1,15 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <!-- Adds a funky flow to Lars McCall -->
-  <body id="body" style="color:red;font-weight:bold;text-shadow:red 0px 0px 10px;font-family: arial;text-align:center;font-size: 5rem;">
-      Lars McCall does not have the Gaz operator.
-    <script>
-      // To assign a random color
-      function randomColor() {
-        document.getElementById("body").style.background = `hsl(${Math.floor(Math.random() * 361)}, 100%, 50%)`;      
-      }
-      // Executes randomColor every millisecond
-      setInterval(randomColor, 1);
-    </script>
-  </body>
-</html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<style>
+    p {
+        color: red;
+        font-family: Roboto;
+        font-weight: bold;
+        font-size: 32px;
+        text-shadow: 0 0 8px rgba(255, 0, 0, 0.75);
+    }
+</style>
+<p id="text">
+    Tylor Botello is mordiddly abeast.
+</p>
+<script>
+    function seizure() {
+        var rng = Math.floor(Math.random() * 361);
+        document.getElementById('text').style.color = `hsl(${rng}, 100%, 50%)`;
+        document.getElementById('text').style.textShadow = `0 0 8px hsl(${rng}, 100%, 50%)`;
+    }
+    setInterval(seizure, 1000);
+</script>
