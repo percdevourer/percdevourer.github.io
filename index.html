@@ -1,28 +1,35 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<style>
-    p {
-        color: red;
-        font-family: Roboto;
-        font-weight: bold;
-        font-size: 32px;
-        text-shadow: 0 0 8px rgba(255, 0, 0, 0.75);
-        text-align: center;
-        margin-top: 8px;
-    }
-</style>
-<p id="text">
-    Tylor Botello is morbidly a beast.<br>
-    Heath Hays is morbidly a beast.<br>
-    Charles Driver is morbidly a beast.<br>
-    Timothy Weeks is morbidly a beast.<br>
-</p>
-<script>
-    function seizure() {
-        var rng = Math.floor(Math.random() * 361);
-        document.getElementById('text').style.color = `hsl(${rng}, 100%, 50%)`;
-        document.getElementById('text').style.textShadow = `0 0 8px hsl(${rng}, 100%, 50%)`;
-    }
-    setInterval(seizure, 200);
-</script>
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lars' Suffering</title>
+		<style>
+			@font-face {
+				font-family: "Lemon Milk";
+				src: url(LEMONMILK-Regular.otf);
+			}
+			p {
+				font-family: "Lemon Milk";
+				font-size: 20px;
+				font-weight: bold;
+				text-shadow: 3px 3px 3px gray;
+			}
+			#cursed {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<p>Lars <span id="cursed">%@$!</span> McCall does not have Gaz from Call of Duty&174; | Modern Warfare II.</p>
+		<script>
+			const levi = [
+				"%@&$", "&@!", "%@$ !%@$", "&%*@ *@%", "!@$ $!*@", "&@$ %&", "%$! !$&", "! %*$!&", "!&*@", "$@!% &*!$%"
+			]
+			function larswear() {
+				document.getElementById('cursed').innerHTML = "you're bad"
+			}
+			larswear();
+		</script>
+	</body>
+</html>
