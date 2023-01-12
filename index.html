@@ -17,19 +17,28 @@
 			}
 			#cursed {
 				color: red;
+				text-shadow: 3px 3px 3px pink;
+			}
+			#op {
+				color: dodgerblue;
+				text-shadow: 3px 3px 3px lightblue;
+			}
+			#cod {
+				color: green;
+				text-shadow: 3px 3px 3px lightgreen;
 			}
 		</style>
 	</head>
 	<body>
-		<p>Lars <span id="cursed">%@$!</span> McCall does not have Gaz from Call of Duty&174; | Modern Warfare II.</p>
+		<p>Lars <span id="cursed">%@$!</span> McCall does not have <span id="op">Gaz</span> from <span id="cod">Call of Duty&#174; | Modern Warfare II</span>.</p>
 		<script>
 			const levi = [
 				"%@&$", "&@!", "%@$ !%@$", "&%*@ *@%", "!@$ $!*@", "&@$ %&", "%$! !$&", "! %*$!&", "!&*@", "$@!% &*!$%"
 			]
 			function larswear() {
-				document.getElementById('cursed').innerHTML = "you're bad"
+				document.getElementById('cursed').innerHTML = levi[Math.floor(Math.random() * 10)];
 			}
-			larswear();
+			setInterval(larswear, 200);
 		</script>
 	</body>
 </html>
